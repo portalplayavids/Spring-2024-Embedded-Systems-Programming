@@ -35,3 +35,26 @@ int main(void)
     free(buffer);
     return 0;
 }
+
+// Union
+#include <stdio.h>
+#include <stdlib.h>
+
+union SensorData
+{
+    int i;
+    float f;
+    double d;
+};
+
+int main(void)
+{
+    union SensorData data;
+    data.i = 10;
+    printf("%d\n", data.i);
+    data.f = 10.0;
+    printf("%f\n", data.f);
+    data.d = 10.0;
+    printf("%f\n", data.d);
+    return 0;
+}
