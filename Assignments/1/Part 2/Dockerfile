@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y build-essential
 
 COPY hello.c app/
 
-COPY makehello . app/
+COPY Makefile app/
 
-CMD ["make hello"]
+RUN make
+
+CMD ["./hello"]
