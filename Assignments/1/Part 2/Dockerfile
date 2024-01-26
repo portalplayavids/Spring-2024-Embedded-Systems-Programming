@@ -2,6 +2,10 @@ FROM ubuntu:22.04
 
 WORKDIR /app
 
-COPY . /app
+RUN apt-get update && apt-get install -y build-essential
 
-CMD ["./makehello"]
+COPY hello.c app/
+
+COPY makehello . app/
+
+CMD ["make hello"]
