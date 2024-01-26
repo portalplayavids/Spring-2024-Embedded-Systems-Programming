@@ -7,10 +7,6 @@ COPY . app/
 
 WORKDIR /app
 
-RUN mkdir build && cd build 
+RUN mkdir build && cd build && cmake .. && make
 
-RUN cmake ..
-
-RUN make
-
-CMD ["./hello"]
+CMD ["./build/hello_world"]
