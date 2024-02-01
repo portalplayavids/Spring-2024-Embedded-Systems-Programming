@@ -2,7 +2,8 @@
 // Date: 02/01/2024
 // Description: Basic Addition program for ONLY INT data types.
 
-//#include "int_arithmetic.h"
-int sub_int(int a, int b) {
-    return a - b;
-}
+#include "int_arithmetic.h"
+
+int sub_int(int a, int b);
+
+
