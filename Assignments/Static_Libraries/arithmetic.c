@@ -3,7 +3,8 @@
 // Description: Basic Addition program for ONLY DOUBLE data types.
 
 #include <stdio.h>
-#include "double_arithmetic.h"
+//#include "libdouble/double_arithmetic.h" //Uncomment this line to be used in local machine.
+#include "double_arithmetic.h"//Uncomment this line to be used in docker.
 
 int main() {
     double a = 5.0;
