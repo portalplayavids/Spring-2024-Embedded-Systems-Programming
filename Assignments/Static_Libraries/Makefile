@@ -21,8 +21,8 @@ TARGET = Arithmetic
 all: $(TARGET)
 
 # Compile main program and link with both C and C++ libraries
-$(TARGET): $(C_LIBRARY) $(CPP_LIBRARY) arithmetic-CPP.o
-	$(CXX) $(CXXFLAGS) -o $(TARGET) arithmetic-CPP.o -L. -lintarithmetic -ldoublearithmetic 
+$(TARGET): $(C_LIBRARY) $(CPP_LIBRARY) arithmetic.o
+	$(CXX) $(CXXFLAGS) -o $(TARGET) arithmetic.o -L. -lintarithmetic -ldoublearithmetic 
 
 # Rule for creating the C static library
 $(C_LIBRARY): $(C_OBJECTS)
