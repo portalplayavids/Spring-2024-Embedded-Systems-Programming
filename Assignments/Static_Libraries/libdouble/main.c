@@ -14,13 +14,13 @@ int main() {
     double result3 = mul_double(a, b);
     double result4 = div_double(a, b);
     
-    printf("The result of adding %lf and %lf is %lf\n", a, b, result);
+    printf("The result of adding % .02lf and %.02lf is %.02lf\n", a, b, result);
     printf("______________________________\n");
-    printf("The result of subtracting %lf and %lf is %lf\n", a, b, result2);
+    printf("The result of subtracting %.02lf and %.02lf is %.02lf\n", a, b, result2);
     printf("______________________________\n");
-    printf("The result of multiplying %lf and %lf is %lf\n", a, b, result3);
+    printf("The result of multiplying %.02lf and %.02lf is %.02lf\n", a, b, result3);
     printf("______________________________\n");
-    printf("The result of dividing %lf and %lf is %lf\n", a, b, result4);
+    printf("The result of dividing %.02lf and %.02lf is %.02lf\n", a, b, result4);
 
     return 0;
 }
