@@ -3,7 +3,7 @@
 // Description: Basic Addition program for ONLY DOUBLE data types.
 
 #include <stdio.h>
-#include "double_arithmetic.h"
+#include "libdouble/double_arithmetic.h"
 
 int main() {
     double a = 5.0;
