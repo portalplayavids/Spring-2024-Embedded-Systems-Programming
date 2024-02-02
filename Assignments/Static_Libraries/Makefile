@@ -15,14 +15,14 @@ CPP_OBJECTS = add_double.o sub_double.o div_double.o mul_double.o
 HEADERS = libint/int_arithmetic.h libdouble/double_arithmetic.h
 
 # Target for the main executable
-TARGET = example
+TARGET = Arithmetic
 
 # Default target
 all: $(TARGET)
 
 # Compile main program and link with both C and C++ libraries
-$(TARGET): $(C_LIBRARY) $(CPP_LIBRARY) main.o
-	$(CXX) $(CXXFLAGS) -o $(TARGET) main.o -L. -lintarithmetic -ldoublearithmetic 
+$(TARGET): $(C_LIBRARY) $(CPP_LIBRARY) arithmetic.o
+	$(CXX) $(CXXFLAGS) -o $(TARGET) arithmetic.o -L. -lintarithmetic -ldoublearithmetic 
 
 # Rule for creating the C static library
 $(C_LIBRARY): $(C_OBJECTS)
