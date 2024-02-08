@@ -17,19 +17,12 @@ the extension is `.so`
 
     in C,
     
-    `gcc -fPIC -c add.c -o add.o` 
-    
-    and/or 
-    
-    `gcc -fPIC -c sub.c -o sub.o`
+    `gcc -fPIC -c <File-Name>.c -o <File-Name>.o` 
     
     in C++, 
     
-    `g++ -fPIC -c add.cpp -o add.o`
+    `g++ -fPIC -c <File-Name>.cpp -o <File-Name>.o`
 
-    and/or
-
-    `g++ -fPIC -c sub.cpp -o sub.o`
 
 3. Create Shared Library: (`-shared` flag extension)
 
