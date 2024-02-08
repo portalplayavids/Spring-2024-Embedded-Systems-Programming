@@ -7,13 +7,13 @@
 #include "double_arithmetic.h"//Uncomment this line to be used in docker.
 
 int main() {
-    double a = 5.0;
-    double b = 3.0;
+    float a = 5.0;
+    float b = 3.0;
     
-    double result = add_double(a, b);
-    double result2 = sub_double(a, b);
-    double result3 = mul_double(a, b);
-    double result4 = div_double(a, b);
+    float result = add_double(a, b);
+    float result2 = sub_double(a, b);
+    float result3 = mul_double(a, b);
+    float result4 = div_double(a, b);
     
     printf("The result of adding % .02lf and %.02lf is %.02lf\n", a, b, result);
     printf("______________________________\n");
