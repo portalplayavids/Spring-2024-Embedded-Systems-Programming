@@ -15,7 +15,7 @@ set(C_LIBRARY arithmetic)
 set(CPP_LIBRARY cpparithmetic)
 
 # Add source files for the executable
-add_executable(Arithmetic arithmetic-CPP.cpp)
+add_executable(ArithmeticTool cpparithmetic.cpp)
 
 # Add a static library for C
 add_library(${C_LIBRARY} STATIC libint/add_int.c libint/sub_int.c libint/mul_int.c libint/div_int.c)
@@ -24,4 +24,4 @@ add_library(${C_LIBRARY} STATIC libint/add_int.c libint/sub_int.c libint/mul_int
 add_library(${CPP_LIBRARY} STATIC libdouble/add_double.cpp libdouble/sub_double.cpp libdouble/mul_double.cpp libdouble/div_double.cpp)
 
 # Link the executable with both C and C++ libraries
-target_link_libraries(Arithmetic ${C_LIBRARY} ${CPP_LIBRARY})
+target_link_libraries(ArithmeticTool ${C_LIBRARY} ${CPP_LIBRARY})
