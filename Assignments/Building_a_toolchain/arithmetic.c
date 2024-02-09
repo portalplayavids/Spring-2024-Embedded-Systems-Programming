@@ -11,10 +11,10 @@ int main() {
     float a = 5.0;
     float b = 3.0;
     
-    float result = add_int(a, b);
-    float result2 = sub_int(a, b);
-    float result3 = mul_int(a, b);
-    float result4 = div_int(a, b);
+    float result = add_double(a, b);
+    float result2 = sub_double(a, b);
+    float result3 = mul_double(a, b);
+    float result4 = div_double(a, b);
     
     printf("The result of adding % .02lf and %.02lf is %.02lf\n", a, b, result);
     printf("______________________________\n");

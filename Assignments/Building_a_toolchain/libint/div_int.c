@@ -4,4 +4,10 @@
 
 #include "int_arithmetic.h"
 
-int div_int(int a, int b);
+int div_int(int a, int b){
+    if (b == 0){
+        return 0;
+    }
+
+    return a / b;
+}
