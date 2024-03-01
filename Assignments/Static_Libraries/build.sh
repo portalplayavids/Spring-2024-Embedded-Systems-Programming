@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# set -x # Print commands and their arguments as they are executed
-set -e # Exit immediately if a command exits with a non-zero status
+set -x
+set -e
 
 # Compile libartihmetic for int operations
 
@@ -85,8 +85,8 @@ export LD_LIBRARY_PATH=$PWD
 ./arithmetic
 
 # Clean up artifacts
-# rm arithmetic
-# rm libarithmetic.a
-# rm libcpparithmetic.a
+rm arithmetic
+rm libarithmetic.a
+rm libcpparithmetic.a
 
-# echo Cleaned up artifacts.
+echo Cleaned up artifacts.
