@@ -14,17 +14,16 @@ int main() {
     int c = 5;
     int d = 3;
     
-    int result = add_int(a, b);
-    int result2 = sub_int(a, b);
-    int result3 = mul_int(a, b);
-    int result4 = div_int(a, b);
+    int result = add_int(c, d);
+    int result2 = sub_int(c, d);
+    int result3 = mul_int(c, d);
+    int result4 = div_int(c, d);
     float result5 = add_double(a, b);
     float result6 = sub_double(a, b);
     float result7 = mul_double(a, b);
     float result8 = div_double(a, b);
-
     
-   printf("The result of int type adding %d and %d is %d\n", c,d, result);
+    printf("The result of int type adding %d and %d is %d\n", c,d, result);
     printf("______________________________\n");
     printf("The result of int type subtracting %d and %d is %d\n", c,d, result2);
     printf("______________________________\n");
