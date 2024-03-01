@@ -3,6 +3,11 @@
 # set -x # Print commands and their arguments as they are executed
 set -e # Exit immediately if a command exits with a non-zero status
 
+# Begin Build Process
+echo
+echo "||   Building arithmetic  ||"
+echo
+
 # Compile libartihmetic for int operations
 
 cd libint
@@ -18,7 +23,9 @@ ar rcs libarithmetic.a add_int.o sub_int.o mul_int.o div_int.o
 ranlib libarithmetic.a
 
 # Move libarithmetic.a into working directory
-echo Moving library into working directory...
+echo
+echo Moving library libarithmetic.a into working directory...
+echo "------------------------------------------------------------"
 
 mv libarithmetic.a ..
 
@@ -53,7 +60,9 @@ ar rcs libcpparithmetic.a add_double.o sub_double.o mul_double.o div_double.o
 ranlib libcpparithmetic.a
 
 # Move libcpparithmetic.a into working directory
-echo Moving library into working directory...
+echo
+echo Moving library libcpparithmetic.a into working directory...
+echo "------------------------------------------------------------"
 
 mv libcpparithmetic.a ..
 
@@ -73,20 +82,31 @@ rm div_double.o
 
 cd ..
 
-echo Build complete.
+echo
+echo "||     Build complete!    ||"
 
 # Compile arithmetic
 g++ -o arithmetic arithmetic-CPP.cpp -L. -larithmetic -lcpparithmetic
-echo Compiled arithmetic.
+
+echo
+echo "||   Compiled arithmetic  ||"
 
 # Run arithmetic
-echo Running ./arithmetic
+
+echo
+echo "|| Now Running arithmetic ||"
+echo
+echo "------------------------------------------------------------"
+
 export LD_LIBRARY_PATH=$PWD
 ./arithmetic
 
 # Clean up artifacts
-# rm arithmetic
-# rm libarithmetic.a
-# rm libcpparithmetic.a
+rm arithmetic
+rm libarithmetic.a
+rm libcpparithmetic.a
 
-# echo Cleaned up artifacts.
+echo 
+echo "------------------------------------------------------------"
+echo Cleaned up artifacts.
+echo
