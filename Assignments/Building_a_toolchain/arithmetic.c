@@ -11,18 +11,31 @@ int main() {
     float a = 5.0;
     float b = 3.0;
     
-    float result = add_double(a, b);
-    float result2 = sub_double(a, b);
-    float result3 = mul_double(a, b);
-    float result4 = div_double(a, b);
-    
-    printf("The result of adding % .02lf and %.02lf is %.02lf\n", a, b, result);
-    printf("______________________________\n");
-    printf("The result of subtracting %.02lf and %.02lf is %.02lf\n", a, b, result2);
-    printf("______________________________\n");
-    printf("The result of multiplying %.02lf and %.02lf is %.02lf\n", a, b, result3);
-    printf("______________________________\n");
-    printf("The result of dividing %.02lf and %.02lf is %.02lf\n", a, b, result4);
+    int result = add_int(a, b);
+    int result2 = sub_int(a, b);
+    int result3 = mul_int(a, b);
+    int result4 = div_int(a, b);
+    float result5 = add_double(a, b);
+    float result6 = sub_double(a, b);
+    float result7 = mul_double(a, b);
+    float result8 = div_double(a, b);
 
+    
+    printf("The result of int type adding %d and %d is %d\n", a, b, result);
+    printf("______________________________\n");
+    printf("The result of int type subtracting %d and %d is %d\n", a, b, result2);
+    printf("______________________________\n");
+    printf("The result of int type multiplying %.02lf and %.02lf is %.02lf\n", a, b, result3);
+    printf("______________________________\n");
+    printf("The result of int type dividing %.02lf and %.02lf is %.02lf\n", a, b, result4);
+    printf("______________________________\n");
+    printf("The result of double type adding %.02lf and %.02lf is %.02lf\n", a, b, result5);
+    printf("______________________________\n");
+    printf("The result of double type subtracting %.02lf and %.02lf is %.02lf\n", a, b, result6);
+    printf("______________________________\n");
+    printf("The result of double type multiplying %.02lf and %.02lf is %.02lf\n", a, b, result7);
+    printf("______________________________\n");
+    printf("The result of double type dividing %.02lf and %.02lf is %.02lf\n", a, b, result8);
+    
     return 0;
 }
