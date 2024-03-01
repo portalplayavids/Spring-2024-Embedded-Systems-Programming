@@ -1,17 +1,14 @@
 FROM ubuntu:22.04
 
-RUN apt-get update && apt-get install -y build-essential
+RUN apt-get update && apt-get install -y build-essential\
+    cmake
 
-COPY arithmetic.c app/
-
-COPY Makefile app/
-
-COPY libdouble app/
-
-COPY libint app/
+COPY . app/
 
 WORKDIR /app
 
-RUN make
+RUN rm -rf build
 
-CMD ["./Arithmetic"]
+RUN mkdir build && cd build && cmake .. && make
+
+CMD ["./build/Arithmetic"]
