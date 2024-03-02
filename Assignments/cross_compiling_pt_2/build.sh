@@ -102,11 +102,11 @@ export LD_LIBRARY_PATH=$PWD
 ./arithmetic
 
 # Clean up artifacts
-rm arithmetic
-rm libarithmetic.a
-rm libcpparithmetic.a
+# rm arithmetic
+# rm libarithmetic.a
+# rm libcpparithmetic.a
 
-echo 
-echo "------------------------------------------------------------"
-echo Cleaned up artifacts.
-echo
+# echo 
+# echo "------------------------------------------------------------"
+# echo Cleaned up artifacts.
+# echo
