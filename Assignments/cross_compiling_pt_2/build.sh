@@ -5,6 +5,18 @@
 # set -x # Print commands and their arguments as they are executed
 set -e # Exit immediately if a command exits with a non-zero status
 
+#########################################################################################
+
+# Make the Utility scripts executable
+echo
+echo "--------------------------------------------------------------"
+echo "||Making setup scripts executables||"
+echo "--------------------------------------------------------------"
+echo
+chmod +x CleanUp.sh entrypoint.sh envsetup.sh ReCompile.sh
+
+#########################################################################################
+
 # Begin Build Process
 echo
 echo "------------------------------------------------------------"
@@ -115,39 +127,51 @@ echo
 export LD_LIBRARY_PATH=$PWD
 # ./arithmetic
 
+########################################################################################
+
+# # Setup for cross-compiling on ARM Architecture
+# echo
+# echo "------------------------------------------------------------"
+# echo "||   Setting up for cross-compiling from ARM architecture  ||"
+# echo "------------------------------------------------------------"
+# echo
+
+# # Build docker image for ARM 
+# docker buildx build --platform linux/amd64 -f ToolSetup.dockerfile -t duo-sdk .
+
+# Setup for cross-compiling on x86-64 Architecture
+echo
+echo "------------------------------------------------------------"
+echo "||   Setting up for cross-compiling from x86-64 architecture  ||"
+echo "------------------------------------------------------------"
+echo
+
+# Build docker image for x86-64
+docker build -t pr0alpaca/duo-sdk-shared -f ToolSetup.dockerfile .
+
 # Configure the Directory
+echo
+echo "------------------------------------------------------------"
+echo "||   Configuring the directory  ||"
+echo "------------------------------------------------------------"
+echo
+
 docker run --rm -v $PWD:/app -t duo-sdk bash -c "mkdir build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=/app/milkv_duo.cmake .."
-
-# Setup for cross-compiling on ARM Architecture
-echo
-echo "------------------------------------------------------------"
-echo "||   Setting up for cross-compiling to ARM architecture  ||"
-echo "------------------------------------------------------------"
-echo
-
-# Build docker image for ARM 
-docker buildx build --platform linux/amd64 -f ToolSetup.dockerfile -t duo-sdk .
-
-# # Setup for cross-compiling on x86-64 Architecture
-# echo
-# echo "------------------------------------------------------------"
-# echo "||   Setting up for cross-compiling to x86-64 architecture  ||"
-# echo "------------------------------------------------------------"
-# echo
-
-# # Build docker image for x86-64
-# docker build -t duo-sdk -f toolsetup.dockerfile .
 
 # Run docker container
 echo
 echo "------------------------------------------------------------"
-echo "||  Starting Docker Container: pr0alpaca/duo-sdk  ||"
+echo "||  Starting Docker Container: pr0alpaca/duo-sdk-SHARED  ||"
 echo "------------------------------------------------------------"
 echo
 
-docker run --platform linux/amd64 --rm -v $PWD:/app -t duo-sdk bash -c "cd build && cmake .. && make"
+# # ARM Architecture
+# docker run --platform linux/amd64 --rm -v $PWD:/app -t duo-sdk bash -c "cd build && cmake .. && make"
 
-# Clean up artifacts
+# x86-64 Architecture
+docker run --rm -v $PWD:/app -t duo-sdk bash -c "cd build && cmake .. && make"
+
+# # Clean up artifacts
 # rm arithmetic
 # rm libarithmetic.a
 # rm libcpparithmetic.a
