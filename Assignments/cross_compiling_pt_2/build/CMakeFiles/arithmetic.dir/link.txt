@@ -1,2 +1,0 @@
-//duo-sdk/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-ar qc libarithmetic.a CMakeFiles/arithmetic.dir/libint/add_int.c.o CMakeFiles/arithmetic.dir/libint/sub_int.c.o CMakeFiles/arithmetic.dir/libint/mul_int.c.o CMakeFiles/arithmetic.dir/libint/div_int.c.o
-//duo-sdk/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-ranlib libarithmetic.a
