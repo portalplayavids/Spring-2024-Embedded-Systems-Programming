@@ -15,7 +15,9 @@ set(C_LIBRARY arithmetic)
 set(CPP_LIBRARY cpparithmetic)
 
 # Add source files for the executable
-add_executable(Arithmetic arithmetic-CPP.cpp)
+include_directories(unity/src)
+set(SOURCE_FILES src/test.c src/other_file.c unity/src/unity.c)
+add_executable(test_runner ${SOURCE_FILES})
 
 # Add a static library for C
 add_library(${C_LIBRARY} STATIC libint/add_int.c libint/sub_int.c libint/mul_int.c libint/div_int.c)
