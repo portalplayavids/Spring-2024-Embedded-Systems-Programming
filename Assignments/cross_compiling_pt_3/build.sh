@@ -161,7 +161,7 @@ docker run --rm -v $PWD:/app -t duo-sdk bash -c "mkdir build && cd build && cmak
 # Run docker container
 echo
 echo "------------------------------------------------------------"
-echo "||  Starting Docker Container: pr0alpaca/duo-sdk-STATIC  ||"
+echo "||  Starting Docker Container: pr0alpaca/duo-sdk-SHARED  ||"
 echo "------------------------------------------------------------"
 echo
 
