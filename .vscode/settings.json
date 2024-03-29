@@ -1,3 +1,3 @@
 {
-    "cmake.sourceDirectory": "/Users/elijah/Desktop/School/Spring-2024-Embedded-Systems-Programming/Assignments/Building_a_toolchain"
+    "cmake.sourceDirectory": "/wsl.localhost/Ubuntu/home/elijah/Spring-2024-Embedded-Systems-Programming/crosstool-ng/.build/src/expat-2.5.0"
 }

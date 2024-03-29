@@ -1,0 +1,2 @@
+//duo-sdk/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-ar qc libcpparithmetic.a CMakeFiles/cpparithmetic.dir/libdouble/add_double.cpp.o CMakeFiles/cpparithmetic.dir/libdouble/sub_double.cpp.o CMakeFiles/cpparithmetic.dir/libdouble/mul_double.cpp.o CMakeFiles/cpparithmetic.dir/libdouble/div_double.cpp.o
+//duo-sdk/riscv64-linux-musl-x86_64/bin/riscv64-unknown-linux-musl-ranlib libcpparithmetic.a
