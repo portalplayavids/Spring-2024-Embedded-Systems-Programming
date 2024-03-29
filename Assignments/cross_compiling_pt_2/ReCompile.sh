@@ -12,4 +12,4 @@ echo "||   Re-Compiling arithmetic  ||"
 echo "------------------------------------------------------------"
 echo
 
-docker run --rm -v $PWD:/app -t duo-sdk bash -c "cd build && make"
+docker run --rm -v $PWD:/app -t pr0alpaca/duo-sdk-shared bash -c "cd build && make"

@@ -156,7 +156,7 @@ echo "||   Configuring the directory  ||"
 echo "------------------------------------------------------------"
 echo
 
-docker run --rm -v $PWD:/app -t duo-sdk bash -c "mkdir build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=/app/milkv_duo.cmake .."
+docker run --rm -v $PWD:/app -t pr0alpaca/duo-sdk-shared bash -c "mkdir build && cd build && cmake -DCMAKE_TOOLCHAIN_FILE=/app/milkv_duo.cmake .."
 
 # Run docker container
 echo
@@ -169,7 +169,7 @@ echo
 # docker run --platform linux/amd64 --rm -v $PWD:/app -t duo-sdk bash -c "cd build && cmake .. && make"
 
 # x86-64 Architecture
-docker run --rm -v $PWD:/app -t duo-sdk bash -c "cd build && cmake .. && make"
+docker run --rm -v $PWD:/app -t pr0alpaca/duo-sdk-shared bash -c "cd build && cmake .. && make"
 
 # # Clean up artifacts
 # rm arithmetic
